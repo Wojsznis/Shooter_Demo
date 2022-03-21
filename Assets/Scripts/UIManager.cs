@@ -1,0 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+
+public class UIManager : MonoBehaviour
+{
+    [SerializeField] private TMP_Text ammoText;
+
+    [SerializeField] private GameObject coin;
+
+    public void UpdateAmmo(int count)
+    {
+        ammoText.text = "Ammo: " + count;
+    }
+
+    public void CollectedCoin()
+    {
+        coin.SetActive(true);
+    }
+
+    public void RemoveCoin()
+    {
+        coin.SetActive(false);
+    }
+}
